@@ -36,6 +36,8 @@ class Cities {
 
 	private:
 		std::vector<coord_t> map_;
+	
+	//friends block :D
 	friend std::istream& operator>> (std::istream& is, Cities& cities);
 	friend std::ostream& operator<< (std::ostream& os, Cities& cities);
 };
