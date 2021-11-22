@@ -33,8 +33,9 @@ class Cities {
 
 ////debug block
 		void debug_print_city_();
-		
+
 	private:
 		std::vector<coord_t> map_;
 	friend std::istream& operator>> (std::istream& is, Cities& cities);
+	friend std::istream& operator<< (std::ostream& os, Cities& cities);
 };
