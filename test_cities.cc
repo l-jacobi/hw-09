@@ -29,6 +29,8 @@ void test_tpd(){
 	sum += std::hypot(2 - 15, 20 - 7);
 	std::cout << sum << std::endl;
 
+	// wow i sure wish there was some form of technology that make doing repetitive computations quicker and easier
+
 	Cities::permutation_t order = {3, 4, 2, 0, 1};
 	assert(five_cities.total_path_distance(order) == sum);
 }

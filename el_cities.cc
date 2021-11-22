@@ -4,6 +4,10 @@
 
 using coord_t = Cities::coord_t;
 
+int Cities::city_count_(){
+	return map_.size();
+}
+
 std::istream& operator>> (std::istream& is, Cities& cities){
 	//getine, go until it reaches space? then until it ends?
 	int x, y;

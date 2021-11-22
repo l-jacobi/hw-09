@@ -34,6 +34,8 @@ class Cities {
 		// distance on a plane between their coordinates.
 		double total_path_distance(const permutation_t& ordering) const;
 
+		int city_count_();
+
 ////debug block
 	//	friend void debug_print_city(Cities cities);
 
