@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <vector>
 
 
@@ -29,4 +30,11 @@ class Cities {
 		// The distance between any two cities is computed as the Euclidean 
 		// distance on a plane between their coordinates.
 		double total_path_distance(const permutation_t& ordering) const;
+
+////debug block
+		void debug_print_city_();
+		
+	private:
+		std::vector<coord_t> map_;
+	friend std::istream& operator>> (std::istream& is, Cities& cities);
 };
