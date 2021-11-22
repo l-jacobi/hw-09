@@ -11,7 +11,7 @@ test: test.o
 test.o: test.cpp
 	$(CXX) $(CXXFLAGS) $(OPTFLAGS) -c -o $@ $<
 
-test_cities: el_cities.o rebecca_cities.o test_cities.o
+test_cities: el_cities.o test_cities.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
 tsp: tsp.o
