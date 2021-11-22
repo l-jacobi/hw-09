@@ -32,7 +32,7 @@ class Cities {
 		double total_path_distance(const permutation_t& ordering) const;
 
 ////debug block
-		void debug_print_city_();
+		friend void debug_print_city(Cities cities);
 
 	private:
 		std::vector<coord_t> map_;

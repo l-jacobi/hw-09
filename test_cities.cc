@@ -2,16 +2,17 @@
 #include "cities.hh"
 #include <iostream>
 #include <fstream>
+using coord_t = Cities::coord_t;
 
-void Cities::debug_print_city_(){
-	for(coord_t coord : map_){
+void debug_print_city(Cities cities){
+	for(coord_t coord : cities.map_){
 		std::cout << coord.first << ", " << coord.second << std::endl;
 	}
 }
 
 int main(int argc, char* argv[]){
 	
-	if(argc != 2){std::cerr << "fuck you";}
+	if(argc != 2){std::cerr << "fuck you\n";}
 
 	std::string input_file = argv[1];
 	std::ifstream fis(input_file);
@@ -19,7 +20,7 @@ int main(int argc, char* argv[]){
 
 	Cities cities;
 	fis >> cities;
-	cities.debug_print_city_();
+	debug_print_city(cities);
 
 	return 0;
 }
