@@ -46,9 +46,9 @@ double Cities::total_path_distance(const permutation_t& ordering) const{
 	assert(ordering.size() == map_.size());
 	//make into a do while loop later if time
 	for(int i = 1; i < ordering_size; i++){
-		distance += hypot(map_[ordering[i]].first - map_[ordering[i-1]].first, map_[ordering[i]].second - map_[ordering[i-1]].second);
+		distance += std::hypot(map_[ordering[i]].first - map_[ordering[i-1]].first, map_[ordering[i]].second - map_[ordering[i-1]].second);
 	}
-	distance +=  hypot(map_[ordering[ordering_size - 1]].first - map_[ordering[0]].first, map_[ordering[ordering_size - 1]].second - map_[ordering[0]].second);
+	distance +=  std::hypot(map_[ordering[ordering_size - 1]].first - map_[ordering[0]].first, map_[ordering[ordering_size - 1]].second - map_[ordering[0]].second);
 	return distance;
 }
 
