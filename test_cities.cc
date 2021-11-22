@@ -47,9 +47,9 @@ void test_reorder(){
 	assert(a == b);
 }
 
-int main(int argc, char* argv[]){
-	
-	if(argc != 2){std::cerr << "fuck you\n";}
+int main(/*int argc, char* argv[]*/){
+/*	
+	if(argc != 2){std::cerr << "not enough\n";}
 
 	std::string input_file = argv[1];
 	std::ifstream fis(input_file);
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]){
 	fis >> cities;
 //	debug_print_city(cities);
 //	std::cout << cities;
-
+*/
 	test_tpd();
 	test_reorder();
 

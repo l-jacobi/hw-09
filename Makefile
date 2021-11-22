@@ -3,7 +3,7 @@ CXXFLAGS=-Wall -Wextra -pedantic -std=c++17 -O0 -g
 LDFLAGS=$(CXXFLAGS)
 OBJ=$(SRC:.cc=.o)
 
-all:  test_cities tsp
+all:  cities tsp
 
 test: test.o
 	$(CXX) $(LDFLAGS) -o $@ $^
@@ -11,10 +11,13 @@ test: test.o
 test.o: test.cpp
 	$(CXX) $(CXXFLAGS) $(OPTFLAGS) -c -o $@ $<
 
-test_cities: el_cities.o test_cities.o
+test_cities: cities.o test_cities.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
-tsp: tsp.o
+cities: cities.o
+	$(CXX) $(LDFLAGS) -o $@ $^
+
+tsp: tsp.o cities.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
 %.o: %.cc %.hh
