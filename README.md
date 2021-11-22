@@ -32,11 +32,11 @@ While I'd guess that we were supposed to use `std::sort` and create a fancy cust
 
 ## the test_cities file
 
-This isn't being graded, I just want to know why `assert(five_cities.total_path_distance({ 0, 1, 2, 3, 4 })` clearly evaluates to 48.8699 when I add a line of code printing the result of `total_path_distance` every time it's called, and yet `assert(five_cities.total_path_distance({ 0, 1, 2, 3, 4 }) == 48.8699);` throws an error.
+This isn't being graded, I just want to know why `assert(five_cities.total_path_distance({ 0, 1, 2, 3, 4 })` = 48.8699 but `assert(five_cities.total_path_distance({ 0, 1, 2, 3, 4 }) == 48.8699);` crashes
 
 ## the Makefile
 
-You compile the final program with `make what` and run it with `./what`. I ran out of names. I can't guarentee anything other than `make what` and `make test_cities.cc` will actually compile. Anything else in there is a wild experiment with something I do not fully understand.
+You compile the final program with `make what` and run it with `./what`. I probably could've thought of something better. I can't guarentee anything other than `make what` and `make test_cities` will actually compile. Anything else in there is a wild experiment with something I do not fully understand.
 
 Rebecca Guglin: random_permutation, tsp.cc, visualization
 =========================================================
