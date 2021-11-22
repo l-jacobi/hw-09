@@ -23,7 +23,6 @@ random_permutation(unsigned len)
     if(count(out.begin(), out.end(), num) == 0){
       out.push_back(num);
     }
-    else{ auto num = distribution(generator); }
   }
   return out;
 }
