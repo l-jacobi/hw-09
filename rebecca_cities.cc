@@ -8,7 +8,7 @@
 using namespace std;
 
 Cities::permutation_t
-random_permutation(unsigned len)
+Cities::random_permutation(unsigned len)
 {
   assert(int(len) > 0);
   Cities::permutation_t out;
