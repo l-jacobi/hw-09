@@ -4,7 +4,7 @@ El &amp; Rebecca
 El Jacobi: Problems 1 - 4, cities.hh, Makefile
 =========================
 
-rebecca may have had the objectively way harder part of the coding but i know how markdown works and can make this file look cool ooOOOooOOOo
+rebecca may have had the objectively way harder part of the coding but i know how markdown works and can make this file look nice ooOOOooOOOo
 
 ## General additions to cities.hh
 
