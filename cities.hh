@@ -14,6 +14,9 @@ class Cities {
 	public:
 		// A pair of integral coordinates for each city
 		using coord_t = std::pair<int, int>;
+		using map_t = std::vector<coord_t>;
+
+		Cities(map_t map = {});
 
 		// An ordering of cities. Each value represents a unique index
 		// into the current city ordering in some container.
@@ -25,7 +28,7 @@ class Cities {
 		// the first two elements (coordinates) in the new Cities object.
 		Cities reorder(const permutation_t& ordering) const;
 
-    	permutation_t Cities::random_permutation(unsigned len);
+    	permutation_t random_permutation(unsigned len);
 
 		// For a given permutation of the cities in this object,
 		// compute how long (distance) it would take to traverse all the cities in
@@ -40,7 +43,7 @@ class Cities {
 	//	friend void debug_print_city(Cities cities);
 
 	private:
-		std::vector<coord_t> map_;
+		map_t map_;
 
 	//friends block :D
 	friend std::istream& operator>> (std::istream& is, Cities& cities);
