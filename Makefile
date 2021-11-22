@@ -14,13 +14,10 @@ test.o: test.cpp
 test_cities: cities.o test_cities.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
-what: cities.o tsp.o
-	$(CXX) $(LDFLAGS) -o $@ $^
-
 cities: cities.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
-tsp: tsp.o
+tsp: cities.o tsp.o
 	$(CXX) $(LDFLAGS) -o $@ $^
 
 %.o: %.cc %.hh

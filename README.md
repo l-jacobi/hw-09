@@ -38,7 +38,7 @@ This isn't being graded, I just want to know why `assert(five_cities.total_path_
 
 ## the Makefile
 
-You compile the final program with `make what` and run it with `./what`. I probably could've thought of something better. I can't guarentee anything other than `make what` and `make test_cities` will actually compile. Anything else in there is a wild experiment with something I do not fully understand.
+You compile the final program with `make tsp` and run it with `./tsp`. I can't guarentee anything other than `make what` and `make test_cities` will actually compile properly. Anything else in there is a wild experiment with something I do not fully understand.
 
 Rebecca Guglin: random_permutation, tsp.cc, visualization
 =========================================================
