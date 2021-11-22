@@ -31,7 +31,7 @@ random_permutation(unsigned len)
 int main(int argc, char* argv[])
 {
   int iterations = 1000000;
-  double min;
+  double min = 0;
   ifstream ifs(argv[1]);   //open the infile
   ofstream ofs("shortest.tsv");  //build an outfile for the final ordering
   Cities cities;
@@ -39,12 +39,12 @@ int main(int argc, char* argv[])
   ifs >> cities;
   int size = cities.city_count_();
   int i = 1; while(i <= iterations){
-    Cities::permutation_t ordering = cities.random_permutation(size);
+    auto ordering = random_permutation(size);
     double distance = cities.total_path_distance(ordering);
     //this should initialize the minimum to the first distance outputted
     if((i==1) || distance < min){
       min = distance;
-      assert(distance > 0);
+      assert(min > 0); //check that min's actually been updated
       cout<<i<<"\t"<<distance<<endl;
       cities = cities.reorder(ordering);
     }
