@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
   ifs >> cities;
   int size = cities.city_count_();
   int i = 1; while(i <= iterations){
-    Cities::permutation_t ordering = cities.random_permutation(size);
+    auto ordering = random_permutation(size);
     double distance = cities.total_path_distance(ordering);
     //this should initialize the minimum to the first distance outputted
     if((i==1) || distance < min){
