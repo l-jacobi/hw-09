@@ -1,8 +1,6 @@
 #include "cities.hh"
-#include <iostream>
-#include <random>
-#include <algorithm>
-#include <chrono>
+#include <cmath>
+#include <cassert>
 
 using coord_t = Cities::coord_t;
 
@@ -24,25 +22,18 @@ std::ostream& operator<< (std::ostream& os, Cities& cities){
 	return os;
 }
 
-using namespace std;
-
-Cities::permutation_t
-Cities::random_permutation(unsigned len)
-{
-  assert(int(len) > 0);
-  Cities::permutation_t out;
-  int end = len-1;
-  unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-  //makes sure each prog call returns a different vector, even within the same comp
-  //is this necessary? seems cumbersome
-  static default_random_engine generator (seed);
-  uniform_int_distribution<unsigned int> distribution(0, end);
-  while(out.size() != len){
-    auto num = distribution(generator);
-    if(count(out.begin(), out.end(), num) == 0){
-      out.push_back(num);
-    }
-    else{ auto num = distribution(generator); }
-  }
-  return out;
+double Cities::total_path_distance(const permutation_t& ordering) const{
+	double distance = 0;
+	int ordering_size = ordering.size();
+	assert(ordering.size() == map_.size());
+	//make into a do while loop later if time
+	for(int i = 1; i < ordering_size; i++){
+		std::cout << "finding d between " << map_[ordering[i]].first << " " << map_[ordering[i]].second << " and " << map_[ordering[i-1]].first << " " << map_[ordering[i-1]].second << std::endl;
+		distance += hypot(map_[ordering[i]].first - map_[ordering[i-1]].first, map_[ordering[i]].second - map_[ordering[i-1]].second);
+		std::cout << distance << std::endl;
+	}
+	std::cout << "finding d between " << map_[ordering[ordering_size - 1]].first << " " << map_[ordering[ordering_size - 1]].second << " and " << map_[ordering[0]].first << " " << map_[ordering[0]].second << std::endl;
+	distance +=  hypot(map_[ordering[ordering_size - 1]].first - map_[ordering[0]].first, map_[ordering[ordering_size - 1]].second - map_[ordering[0]].second);
+	std::cout << distance << std::endl;
+	return distance;
 }
