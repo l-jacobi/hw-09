@@ -28,8 +28,6 @@ class Cities {
 		// the first two elements (coordinates) in the new Cities object.
 		Cities reorder(const permutation_t& ordering) const;
 
-    	permutation_t random_permutation(unsigned len);
-
 		// For a given permutation of the cities in this object,
 		// compute how long (distance) it would take to traverse all the cities in
 		// the order of the permutation, and then returning to the first city.

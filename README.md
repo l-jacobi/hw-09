@@ -1,6 +1,17 @@
 # hw-09
 El &amp; Rebecca
 
+El Jacobi: Problems 1 - 4
+=========================
+
+## operator>>
+
+## operator<<
+
+## total_path_distance
+
+## reorder
+
 
 
 Rebecca Guglin: random_permutation, tsp.cc, visualization
