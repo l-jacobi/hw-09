@@ -4,11 +4,13 @@
 #include <fstream>
 using coord_t = Cities::coord_t;
 
+/*
 void debug_print_city(Cities cities){
 	for(coord_t coord : cities.map_){
 		std::cout << coord.first << ", " << coord.second << std::endl;
 	}
 }
+*/
 
 int main(int argc, char* argv[]){
 	
@@ -20,7 +22,8 @@ int main(int argc, char* argv[]){
 
 	Cities cities;
 	fis >> cities;
-	debug_print_city(cities);
+//	debug_print_city(cities);
+	std::cout << cities;
 
 	return 0;
 }

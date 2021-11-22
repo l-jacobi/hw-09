@@ -32,10 +32,10 @@ class Cities {
 		double total_path_distance(const permutation_t& ordering) const;
 
 ////debug block
-		friend void debug_print_city(Cities cities);
+	//	friend void debug_print_city(Cities cities);
 
 	private:
 		std::vector<coord_t> map_;
 	friend std::istream& operator>> (std::istream& is, Cities& cities);
-	friend std::istream& operator<< (std::ostream& os, Cities& cities);
+	friend std::ostream& operator<< (std::ostream& os, Cities& cities);
 };
